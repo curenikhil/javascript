@@ -46,7 +46,7 @@ console.log(addFour(3, 4))
 
 
 const addObject = (num1, num2) => ({username: "Hitesh", price: 199,})
-
+// we have  to wrap the function argument inside the "()"
 console.log(addObject(3, 4))
 
 

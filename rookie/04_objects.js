@@ -74,6 +74,3 @@ console.log(tinderUser.hasOwnProperty('isLoggedIn')) // to check the propery ava
 
 
 //object is very long topic and it covered we in open topic we learn it bit by bit 
-
-
-

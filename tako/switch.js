@@ -1,4 +1,4 @@
-let month = "march"
+let month = "feb"
 switch (month) {
     case "jan":
         console.log("jan")

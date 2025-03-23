@@ -1,4 +1,4 @@
-// this is about how code executed in javascript
+// this is about how code executed in javascript`
 /*
 1. global execution context
 - comes this - which id for browser which is once only

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style=" background-color: black; color: white; font: Recoleta Alt;">
+
+</body>
+<script>
+//    let div = document.createElement('div');
+//    console.log(div)
+//    div.className = "main"
+//    div.id = Math.round(Math.random() * 10 + 1 )
+
+//    div.setAttribute("title", "generated title")
+
+//    div.style.backgroundColor = "green"
+//    div.style.padding = "12px"
+// //    div.innerText = 'hello world'
+
+//   let addText =  document.createTextNode('chai aur code')
+//   div.appendChild(addText)
+
+//   document.body.appendChild(div)
+const colors = ['red', 'orange', 'green', 'aquamarine', 'yellow']
+for (let i = 0; i < colors.length; i++) {
+ let div = document.createElement('div')
+ div.innerText = `box ${i + 1}`
+ div.style.background = colors[i]
+ div.style.paddind = "12px"
+ div.style.borderRadius = "12px"
+ document.body.appendChild(div)
+    
+}
+</script>
+</html>
