@@ -1,69 +1,80 @@
 # 🚀 JavaScript Learning Journey
 
 Welcome to my **JavaScript Learning Project**!  
-This repository contains simple notes while learning from Chai aur Code | Hitesh Chaudhary **JS, DOM, and Web Development**.
+This repository contains simple notes while learning from Chai aur Code | **Hitesh Chaudhary** 
 
 ---
-
-## 📂 **Project Structure**
-# 🚀 JavaScript Learning Project
-
 ## 📜 **Index / Table of Contents**
 1. [Basics](#basics)
-2. [DOM Manipulation](#dom-manipulation)
+2. [Rookie](#rookie)
+3. [Bravo](#bravo)
+4. [Iteration](#iteration)
+5. [Tako](#tako)
+6. [DOM Manipulation](#dom-manipulation)
 
 ---
 
 ## 🟢 **Basics**
-- Variables (let, const, var)
+- Variables (`let`, `const`, `var`)
 - Data Types
 - Operators
 - Functions
 - NumMath
 - Memory Summary
-- String 
-- conversion
+- String operations
+- Type Conversion
 
 ---
+
 ## 🟢 **Rookie**
-- Array
-- Array: concat and spread operator
+- Arrays
+- Array: `concat()` and Spread Operator `[...]`
 - Objects
-- ways to declare objects: Literal & Constructor
-- objects in objects
-- Destructuring Object: Api related
+- Declaring Objects: Literal & Constructor
+- Nested Objects
+- Object Destructuring (useful in APIs)
 
 ---
+
 ## 🟢 **Bravo**
-- function creation
-- Scope: Block and GLobal
-- iife
-- Arrow function
-- This
-- how code execue in JavaScript
----
-## 🟢 **Iteration**
-- introduction of loop
-- while loop, do while loop
-- for of loop
-- for in loop
-- for each
-- reduce
-- filter
-- map
+- Function creation
+- Scope: Block vs Global
+- IIFE (Immediately Invoked Function Expression)
+- Arrow Functions
+- `this` keyword explained
+- How JavaScript executes code (Execution Context)
 
 ---
-## 🟢 **Tako**
-- if, else
-- switch, break
-- truthy-falsy value
+
+## 🟢 **Iteration**
+- Introduction to Loops
+- `while`, `do...while`
+- `for...of`
+- `for...in`
+- `forEach`
+- `reduce`
+- `filter`
+- `map`
+
+---
+
+## 🟢 **Tako (Control Flow)**
+- `if`, `else`
+- `switch`, `break`
+- Truthy & Falsy Values in JavaScript
+
 ---
 
 ## 🟣 **DOM Manipulation**
-- Selecting Elements (getElementById, querySelector)
+- Selecting Elements (`getElementById`, `querySelector`)
 - Changing Content and Styles
-- Adding/Removing Elements
-
+- Adding / Removing Elements
 
 ---
 
+## ✅ **Status**
+✔️ Ongoing — Update as I learn new concepts!
+
+
+*Learning JavaScript*: YouTube
+---
