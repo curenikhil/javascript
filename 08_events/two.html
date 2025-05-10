@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events || part II</title>
+  </head>
+  <body>
+    <h1>chai aur code</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // 
+    const sayHitesh = function () {
+      console.log("hello hitesh");
+    };
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best js series";
+    };
+
+    const changeMe = setTimeout(changeText, 2000);
+
+  const start =  document.querySelector('#start')
+   const stop = document.querySelector('#stop')
+
+   stop.addEventListener('click', () => {
+    console.log('stop button clicked');
+    clearTimeout(changeMe)
+
+   })
+   
+  </script>
+</html>
