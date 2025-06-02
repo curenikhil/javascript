@@ -14,7 +14,7 @@ let name = "hitesh" // string
 let age = 18 //number => 2 to power 53
 let isLoggedIn = false //boolean
 let state; //undefined
-let temperature = null // object (it means empty but something is there)
-let mySymbol = Symbol('description')
+let temperature = null     // object (it means empty but something is there)
+let mySymbol = Symbol('description')  // symbol
 
 console.table([typeof name, typeof age, typeof isLoggedIn, typeof state, typeof temperature, typeof mySymbol]) // to console multiple typeof variable
