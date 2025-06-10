@@ -6,30 +6,34 @@
     <title>Events || part II</title>
   </head>
   <body>
-    <h1>chai aur code</h1>
+    <h1 id="text">chai aur code</h1>
     <button id="start">start</button>
     <button id="stop">stop</button>
   </body>
   <script>
-    // 
-    const sayHitesh = function () {
-      console.log("hello hitesh");
-    };
+// function sayName() { 
+//       console.log("This is Chai")
+//     }
+function sayMyName() { 
+      document.querySelector('#text').innerHTML = `Learn code with chai aur code`
+    }
 
-    const changeText = function () {
-      document.querySelector("h1").innerHTML = "best js series";
-    };
+    let start = document.querySelector('#start')
+    let stop = document.querySelector('#stop')
+    let intervalId;
+    // console.log(intervalId)
 
-    const changeMe = setTimeout(changeText, 2000);
 
-  const start =  document.querySelector('#start')
-   const stop = document.querySelector('#stop')
-
-   stop.addEventListener('click', () => {
-    console.log('stop button clicked');
-    clearTimeout(changeMe)
-
-   })
+    start.addEventListener('click', () => {
+       if(intervalId === undefined){
+           intervalId = setTimeout( sayMyName, 2000)
+       }
+    })
+    stop.addEventListener('click', () => {
+           clearTimeout(intervalId)
+           intervalId = undefined   // reset the intervalId as undefined 
+      
+    })
    
   </script>
 </html>

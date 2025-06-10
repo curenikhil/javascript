@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes Learning</title>
+</head>
+<body style="background-color: #121212 ; color: #fff;">
+    
+
+
+
+</body>
+<script>
+    let div = document.createElement('div');
+    
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1);
+    div.setAttribute("title", "generated title")
+    // div.innerHTML = "the basic show magic append"  // take the data and then rename 
+    let text = document.createTextNode("Text node magic: 2nd showcase")
+    div.appendChild(text)
+    document.body.appendChild(div)
+    console.log(div)
+     
+</script>
+</html>

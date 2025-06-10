@@ -1,0 +1,24 @@
+// How code executed in Js
+
+3 Phase: Global, function and Eval
+
+whenever a js code run creates :
+step1: Global exection context 
+in browser refers: window
+in evironment refers: this
+
+step 2: funtion exectuion context 
+this divided in 2 parts
+Part 1: Memory phase 
+here, the definiton of vairable loaded with undefined value
+for Function, defention is parsed 
+
+part 2: exection context 
+here, follow callstack (lifo : last in first out execution )
+where final output assigned or refers to Golbal execution context
+
+
+
+CASE: when there is nested function or function holded varialbes : 
+specifically,, new sandbox environment created for them; which further deleted after completion and retrun values to gloabl object by there scope prespective 
+

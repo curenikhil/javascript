@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Events</title>
+    <title>HTML Events: EVENTLISTENER </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -45,18 +45,26 @@
 
 
     document.querySelector('#images').addEventListener('click', function(e){
-        e.stopPropagation()
-
-        console.log(e.target.tagName);
-        
+        e.stopPropagation() // stop bubbling
+        console.log(e.target) // target: click inside img that is explicted, return the element which clicked inside it 
+        console.log(e.target.tagName); // img, p, h2, a(link/anchor)
         if(e.target.tagName === 'IMG'){
-
-            console.log(e.target.parentNode);
-            let removeIt = e.target.parentNode
+            // console.log(e.target.parentNode);
+            let removeIt = e.target.parentNode //select first outer-circle of it 
             removeIt.remove()
         };
         
     })
+
+  document.getElementById('google').addEventListener('click', (e) => {
+    e.preventDefault()
+     if(e.target.tagName === 'A'){
+            console.log("parent of anchor: google", e.target.parentNode);
+            let removeIt = e.target.parentNode //select first outer-circle of it 
+            removeIt.remove()
+        };
+  })
+
 </script>
     
 </body>

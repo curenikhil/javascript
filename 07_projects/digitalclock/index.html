@@ -3,43 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
     <title>Your Local Time</title>
+
+    <!-- ✅ Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Set custom font -->
     <style>
       body {
-        background-color: #212121;
-        color: #fff;
-      }
-      .center {
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      #clock {
-        font-size: 40px;
-        background-color: orange;
-        padding: 20px 50px;
-        margin-top: 10px;
-        border-radius: 10px;
+        font-family: "Recoleta Alt", Verdana, sans-serif;
       }
     </style>
   </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
-    <div class="center">
-      <div id="banner"><span>Your local time</span></div>
-      <div id="clock"></div>
-    </div>
+  <body class="bg-[#212121] text-white h-screen flex flex-col justify-center items-center">
 
-    
-    <script src="./chaiaurcode.js"></script>
+    <!-- ✅ Responsive Clock -->
+    <div
+      id="clock"
+      class="text-[60px] sm:text-[80px] md:text-[120px] lg:te[xt-160px] xl:text-[200px] 2xl:text-[250px] font-semibold py-4 px-6 rounded-lg"
+    ></div>
+
+    <!-- ✅ Script -->
+    <script>
+      const clock = document.querySelector('#clock');
+      setInterval(() => {
+        const time = new Date();
+        clock.innerHTML = time.toLocaleTimeString();
+      }, 1000);
+    </script>
   </body>
 </html>

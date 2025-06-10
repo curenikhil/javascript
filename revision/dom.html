@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dom</title>
+    <style>
+        .bg{
+            background-color: #121212;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div class="parent ">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    let parent = document.querySelector('.parent');
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerText);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerText)
+    // }
+     
+    // parent.children[0].style.color = "red"
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+     
+    let dayOne = document.querySelector('.day')
+    // console.log(dayOne.innerHTML);
+    // console.log(dayOne.parentElement.innerHTML);
+     console.log("nodes", parent.childNodes)
+
+</script>
+</html>

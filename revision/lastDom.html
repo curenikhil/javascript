@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last DOM</title>
+</head>
+<body style="background-color: #121212; color: #fff;">
+    
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+
+    function addLanguage (lang){
+       let li =  document.createElement('li');
+       li.innerHTML = `${lang}`
+       document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("TypeScript")
+
+    function optiAdd (lang){
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${lang}`))
+        document.querySelector('.language').appendChild(li)
+    }
+  // here we saved tree traverse time which ultimately good and save time, it helps when there is a lot of li items in the parentNode of children 
+    optiAdd("Java")
+     
+    // replaceWith
+    let langSecond = document.querySelector('li:nth-child(2)')
+
+    let newLi = document.createElement('li');
+
+    newLi.appendChild(document.createTextNode("MOJO"))
+    langSecond.replaceWith(newLi)
+
+    // change last lang
+     let lastLang = document.querySelector('li:last-child')
+
+    let anotherLi = document.createElement('li');
+
+    anotherLi.appendChild(document.createTextNode("C++"))
+    lastLang.replaceWith(anotherLi)
+
+    // remove
+       let updatedLastLang = document.querySelector('li:last-child')
+    updatedLastLang.remove()
+
+</script>
+</html>

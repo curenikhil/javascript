@@ -13,6 +13,7 @@ form.addEventListener('submit', (e) => {
     results.innerText = 'Please enter a valid weight';
   } else {
     const bmi = (weight / (height / 100) ** 2).toFixed(2);
+
     let category;
 
     if (bmi < 18.6) {

@@ -5,35 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events || part II</title>
   </head>
-  <body>
-    <h1>chai aur code</h1>
+  <body style="background-color: #121211; color: #fff; font-family: Verdana">
+    <h1>SetInterval Tutorial</h1>
     <button id="start">start</button>
     <button id="stop">stop</button>
   </body>
   <script>
 
-    const saySomething = (str) => {
-         console.log(str, Date.now());
-    }
-    
-    let intervalId = null;
-  
-
-   document.querySelector('#start').addEventListener('click', () => {
-    if(intervalId !== null) {
-        console.log('Interval already running')
-        return;
-    } else {
-        intervalId = setInterval(saySomething, 1000, "hi")
-    }
-   })
+//  setInterval( () => {
+//   console.log('print me after every sec')
+//  }, 1000)
 
 
-   document.querySelector('#stop').addEventListener('click', () => {
-     clearInterval(intervalId);
-     intervalId = null
-   })
 
- 
+
+// task-1 (print name)
+
+//     let start = document.querySelector('#start')
+// let stop = document.querySelector('#stop')
+// let taskId;
+
+// function printName () {
+//    let p = document.createElement('p');
+//    p.innerHTML = "Hitesh Chaudhary";
+//    document.body.appendChild(p);
+
+//    let date = Date.now();
+//    console.log(`Hitesh Chaudhary ${date}`);
+// }
+
+// start.addEventListener('click', function () {
+//   if (taskId === undefined) {
+//     taskId = setInterval(printName, 1000);
+//   }
+// }); 
+
+// stop.addEventListener('click', function () {
+//   clearInterval(taskId);
+//   taskId = undefined;
+// });
   </script>
 </html>
