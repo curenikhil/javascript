@@ -1,40 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-       
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub User Data</title>
+  </head>
+
+  <body style="background-color: #121212; color: #ffffff">
     <script>
+      // Define the API URI we want to call
+      // const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+      let Username = prompt("enter a github username").toLowerCase();
+      let requestUrl = `https://api.github.com/users/${Username}`;
+      // console.log(requestUrl);
 
-        const requestUrl = 'https://api.github.com/users/curenikhil'
+      // Create a new XMLHttpRequest object
+      const xhr = new XMLHttpRequest();
 
-        const xhr = new XMLHttpRequest();
-        
-        // evoke a XML request on the url
-        xhr.open('GET', requestUrl)
+      // Open a GET request to the API URL
+      xhr.open("GET", requestUrl);
 
-        // tracking the request
-        xhr.onreadystatechange = function () {
-            console.log(xhr.readyState);
+      // Track the request status
+      xhr.onreadystatechange = function () {
+        console.log("Ready State:", xhr.readyState);
 
-          if (xhr.readyState === 4) {
-            // return data here - [ how this and responseText is came into use : Will talk into next tutorial, { can use any var name insted of reponseText and this is only possible using 'this'}]
-             const data = JSON.parse(this.responseText)
-             console.log(typeof data)
+        if (xhr.readyState === 4) {
+          // track changing status codes
+          // console.log(readyState)
 
-             console.log(data.follower)
+          // Received Data
+          // console.log(this.responseText)    // here this refers to current context i.e. xhr = XMLHttpRequest on defined URI
 
-            }  
-            
+          let checkData = this.responseText; // holded the req object in var. so access the key and values
+          // console.log(checkData)
+          // console.log(typeof checkData)  // string
+
+          // convert string in json (required type)  parse (method)
+          let data = JSON.parse(this.responseText);
+          // console.log(typeof data) // object (JSONjj)
+          // console.log(data);
+
+          //  present the data on canvas
+          const userCard = document.createElement("div");
+          userCard.style.display = "flex";
+          userCard.style.alignItems = "center";
+          userCard.style.padding = "10px";
+          userCard.style.border = "1px solid #ffffff";
+          userCard.style.borderRadius = "12px";
+          userCard.style.maxWidth = "700px";
+          userCard.style.margin = "20px auto";
+          userCard.style.fontFamily = "Verdana";
+          userCard.style.backgroundColor = "#1e1e1e";
+
+          // Avatar section
+          const avatar = document.createElement("img");
+          avatar.src = data.avatar_url;
+          avatar.alt = "Avatar";
+          avatar.style.width = "100px";
+          avatar.style.height = "100px";
+          avatar.style.borderRadius = "50%";
+          avatar.style.marginRight = "20px";
+
+          // Info section
+          const infoDiv = document.createElement("div");
+
+          infoDiv.innerHTML = `
+  <div style="margin-bottom: 10px; font-size: 20px;"><strong>${
+    data.name || data.login
+  }</strong></div>
+  <div><strong>Username:</strong> ${data.login}</div>
+  <div><strong>Followers:</strong> ${data.followers}</div>
+  <div><strong>Location:</strong> ${data.location || "N/A"}</div>
+  <div><a href="${
+    data.html_url
+  }" target="_blank" style="color: #4da6ff;">Visit GitHub Profile →</a></div>
+`;
+
+          // Combine and add to DOM
+          userCard.appendChild(avatar);
+          userCard.appendChild(infoDiv);
+          document.body.appendChild(userCard);
         }
-
-        xhr.send();
-
-
-
+      };
+      // console.log(data);
+      // Send the request
+      xhr.send();
     </script>
-</body>
+  </body>
 </html>

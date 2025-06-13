@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing Bind</title>
+</head>
+<body style="background-color: #121212;">
+    <button> Button Clicked</button>
+</body>
+   <script>
+    class React {
+        constructor(){
+            this.library = "React";
+            this.server = "https://localhost:300"
+
+            // requeriment
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick(){
+              console.log('button clicked');
+              console.log(this.server)
+        }
+    }
+    let app = new React ()
+/*
+ 1. create app = new React() → constructor runs.
+2. Inside constructor:
+   - Adds a click event to <button>.
+   - Uses .bind(this) so `this` stays tied to React class instance.
+3. When you click button:
+   - handleClick() runs.
+   - Logs message + this.server (bound to class instance).
+*/
+    
+   </script>
+</html>
